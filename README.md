@@ -1,7 +1,10 @@
 # LibCppCmdLine
 A cross-platform C++ library for parsing command line arguments
 
-# Documentation
+# Project Homepage
+The project homepage can be found [here](http://stephenbonar.com/LibCppCmdLine).
+
+# API Documentation
 The full documentation for the library is available [here](http://stephenbonar.com/LibCppCmdLine/html/index.html)
 
 # Warnings
