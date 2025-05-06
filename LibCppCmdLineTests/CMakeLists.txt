@@ -37,9 +37,9 @@ set(LIBCPPCMD_TEST_INCLUDES
 # Define the libraries the LibCppCmd tests need to link against
 set(LIBCPPCMD_TEST_LIBS
     LibCppCmdLine
-    gtest
-    gtest_main
-    gmock)
+    LibCppCmdLine_gtest
+    LibCppCmdLine_gtest_main
+    LibCppCmdLine_gmock)
 
 # Configure the libcppcmdtests binary build target
 add_executable(libcppcmdtests ${LIBCPPCMD_TEST_SOURCES})
