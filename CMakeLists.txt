@@ -28,7 +28,7 @@ project(LibCppCmdLine VERSION 1.0)
 add_subdirectory(LibCppCmdLine)
 
 # Configure the googletest build.
-add_subdirectory(googletest)
+add_subdirectory(googletest EXCLUDE_FROM_ALL)
 
 # Configure the LibCppCmdTests build.
-add_subdirectory(LibCppCmdLineTests)
+add_subdirectory(LibCppCmdLineTests EXCLUDE_FROM_ALL)
