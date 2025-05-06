@@ -41,26 +41,6 @@ set(LIBCPPCMD_TEST_LIBS
     gtest_main
     gmock)
 
-# [Begin GoogleTest Code Snippet]
-#
-# The following code snippet was obtained from:
-# https://github.com/google/googletest/blob/master/googletest/README.md
-#
-# The following code downloads and adds GoogleTest to the build.
-
-include(FetchContent)
-FetchContent_Declare(
-  googletest
-  # Specify the commit you depend on and update it regularly.
-  URL https://github.com/google/googletest/archive/e2239ee6043f73722e7aa812a459f54a28552929.zip
-)
-
-# For Windows: Prevent overriding the parent project's compiler/linker settings
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
-
-# [End GoogleTest Code Snippet]
-
 # Configure the libcppcmdtests binary build target
 add_executable(libcppcmdtests ${LIBCPPCMD_TEST_SOURCES})
 

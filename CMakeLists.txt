@@ -14,18 +14,21 @@
 # See the License for the specific language governing permissionsand
 # limitations under the License.
 
-# cmake v3.12 is the minimum needed for LibCppCmd
+# cmake v3.12 is the minimum needed for LibCppCmd.
 cmake_minimum_required(VERSION 3.12)
 
-# Specify the C++ standard
+# Specify the C++ standard.
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Configure the project name and version
+# Configure the project name and version.
 project(LibCppCmdLine VERSION 1.0)
 
-# Configure the LibCppCmd library build
+# Configure the LibCppCmd library build.
 add_subdirectory(LibCppCmdLine)
 
-# Configure the LibCppCmdTests build
+# Configure the googletest build.
+add_subdirectory(googletest)
+
+# Configure the LibCppCmdTests build.
 add_subdirectory(LibCppCmdLineTests)
