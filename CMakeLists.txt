@@ -18,7 +18,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 # Specify the C++ standard.
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Configure the project name and version.
@@ -26,12 +26,6 @@ project(LibCppCmdLine VERSION 1.0)
 
 # Configure the LibCppCmd library build.
 add_subdirectory(LibCppCmdLine)
-
-# Configure the googletest build.
-add_subdirectory(googletest)
-add_library(LibCppCmdLine_gtest ALIAS gtest)
-add_library(LibCppCmdLine_gtest_main ALIAS gtest_main)
-add_library(LibCppCmdLine_gmock ALIAS gmock)
 
 # Configure the LibCppCmdTests build.
 add_subdirectory(LibCppCmdLineTests)
