@@ -17,31 +17,27 @@
 # cmake v3.12 is the minimum needed for the library.
 cmake_minimum_required(VERSION 3.12)
 
-# Define the source files needed to build the library.
-set(LIBRARY_SOURCES
-    Constants.cpp
-    Help.cpp
-    MultiPosParam.cpp
-    NameValuePair.cpp
-    Option.cpp
-    OptionParam.cpp
-    Param.cpp
-    Parser.cpp
-    PosParam.cpp
-    ProgParam.cpp
-    Validation.cpp
-    ValueOption.cpp)
-
-# Configure the library build target. Any cmake project that adds
-# this library's directory using add_subdirectory() and 
-# target_include_directories(), as well as links it to a build target using
-# target_link_libraries() can easily add this library to their build.
-add_library(LibCppCmdLine ${LIBRARY_SOURCES})
+# Configure the library build target.
+add_library(LibCppCmdLine
+            Constants.cpp
+            Help.cpp
+            MultiPosParam.cpp
+            NameValuePair.cpp
+            Option.cpp
+            OptionParam.cpp
+            Param.cpp
+            Parser.cpp
+            PosParam.cpp
+            ProgParam.cpp
+            Validation.cpp
+            ValueOption.cpp)
 
 # Override the default behavior of prefixing "lib" on the library binary so
 # we end up with LibCppCmdLine.a isntead of libLibCppCmdLine.a.
 set_target_properties(LibCppCmdLine PROPERTIES PREFIX "")
 
-# Added to ensure the header files are automatically resolved when linking
-# to this library.
-target_include_directories(LibCppCmdLine PUBLIC .)
+# Configure both the library itself and any other target that links with
+# the library is able to resolve the library header files.
+target_include_directories(LibCppCmdLine 
+                           PUBLIC 
+                           ${PROJECT_SOURCE_DIR}/include)

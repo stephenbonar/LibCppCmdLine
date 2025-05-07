@@ -1,4 +1,4 @@
-# CMakeLists.txt - Builds the LibCppCmd library and its tests.
+# CMakeLists.txt - Builds the LibCppCmdLine library and its tests.
 #
 # Copyright (C) 2024 Stephen Bonar
 #
@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissionsand
 # limitations under the License.
 
-# cmake v3.12 is the minimum needed for LibCppCmd.
+# cmake v3.12 is the minimum needed for LibCppCmdLine.
 cmake_minimum_required(VERSION 3.12)
 
 # Specify the C++ standard.
@@ -24,8 +24,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Configure the project name and version.
 project(LibCppCmdLine VERSION 1.0)
 
-# Configure the LibCppCmd library build.
-add_subdirectory(LibCppCmdLine)
+# Configure the LibCppCmdLine library build.
+add_subdirectory(src)
 
-# Configure the LibCppCmdTests build.
-add_subdirectory(LibCppCmdLineTests)
+# Configure the LibCppCmdLineTests build.
+add_subdirectory(tests)
