@@ -26,9 +26,11 @@ FetchContent_Declare(
 
 # For Windows: Prevent overriding the parent project's compiler/linker settings.
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
+# Make GoogleTest available at configuration time.
 FetchContent_MakeAvailable(googletest)
 
-# Configure the executable build target.
+# Configure the test executable build target.
 add_executable(libcppcmdlinetests
                ExampleArguments.cpp
                ExampleHelp.cpp
